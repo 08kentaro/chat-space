@@ -43,7 +43,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|
+|name|string|
 
 ### Association
 - has_many :users
