@@ -32,18 +32,18 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|index: true, nul: false, uniqe: true|
 |mail|string|nul: false|
+|password|integer|nul: false|
 
 ### Association
 - has_many :groups, through: members
 - has_many :messages
-- has-many :members
+- has_many :members
 
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id| nul: false, uniqe: true|
-|group_neme|
+|name|
 
 ### Association
 - has_many :users
