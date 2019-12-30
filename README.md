@@ -39,6 +39,20 @@ Things you may want to cover:
 - has-many :members
 
 
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|nul: false|
+|image|string|
+|group_id|integer|nul: false| 
+|user_id|integer|nul: false|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+
 ## groups_usersテーブル
 
 |Column|Type|Options|
