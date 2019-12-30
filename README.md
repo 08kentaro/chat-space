@@ -39,14 +39,24 @@ Things you may want to cover:
 - has-many :members
 
 
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id| nul: false, uniqe: true|
+|group_neme|
+
+### Association
+- has_many :users
+
+
 ## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|nul: false|
+|body|text|
 |image|string|
-|group_id|integer|nul: false| 
-|user_id|integer|nul: false|
+|group_id|integer|nul: false, foreign_key: true|
+|user_id|integer|nul: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
