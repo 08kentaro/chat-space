@@ -1,0 +1,46 @@
+.main_chat
+ .main_header
+  .group_info
+   .group_name
+    グループ名
+   .member
+    Member : name
+  
+  = link_to '#', class: 'edit_btn' do
+   .text
+    Edit
+
+ .chat_message
+  .top_space
+  .user_time_box
+   .user
+    ユーザー名
+   .time
+    - require "date"
+    - time = DateTime.now
+    = "#{time}"
+  .message
+   おはよう！
+
+  .user_time_box
+   .user
+    ユーザー名
+   .time
+    - require "date"
+    - time = DateTime.now
+    = "#{time}"
+  .message
+   今日は夜から雨
+
+ .message_form
+  .form_box
+   .text_box
+    type a message
+   .img_icon
+    %label{class: "input-box__image"}
+     = icon('far', 'image')
+     %input{type: "file"}
+
+  .send_btn
+   = link_to '#' do
+    Send
