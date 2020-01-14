@@ -59,4 +59,5 @@ gem 'font-awesome-sass'
 
 gem 'devise'
 
-gem ''
+gem 'carrierwave'
+gem 'mini_magick'
