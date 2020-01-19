@@ -54,7 +54,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|
+|content|text|
 |image|string|
 |group_id|integer|nul: false, foreign_key: true|
 |user_id|integer|nul: false, foreign_key: true|
