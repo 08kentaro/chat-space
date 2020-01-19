@@ -4,10 +4,11 @@
       .group_name
         %p= "#{@group.name}"
       .member
+        Member :
         - @group.users.each do |user|
           %li= user.name
 
-    = link_to edit_group_path(1), class: 'edit_btn' do
+    = link_to edit_group_path(@group.id), class: 'edit_btn' do
       .text
         Edit
 
