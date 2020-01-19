@@ -1,46 +1,26 @@
 .main_chat
- .main_header
-  .group_info
-   .group_name
-    グループ名
-   .member
-    Member : name
-  
-  = link_to edit_group_path(1), class: 'edit_btn' do
-   .text
-    Edit
+  .main_header
+    .group_info
+      .group_name
+        %p= "#{@group.name}"
+      .member
+        - @group.users.each do |user|
+          %li= user.name
 
- .chat_message
-  .top_space
-  .user_time_box
-   .user
-    ユーザー名
-   .time
-    - require "date"
-    - time = DateTime.now
-    = "#{time}"
-  .message
-   おはよう！
+    = link_to edit_group_path(1), class: 'edit_btn' do
+      .text
+        Edit
 
-  .user_time_box
-   .user
-    ユーザー名
-   .time
-    - require "date"
-    - time = DateTime.now
-    = "#{time}"
-  .message
-   今日は夜から雨
+  .chat_message
+    .top_space
+    .messages
+      = render @messages
 
- .message_form
-  .form_box
-   .text_box
-    type a message
-   .img_icon
-    %label{class: "input-box__image"}
-     = icon('far', 'image')
-     %input{type: "file"}
-
-  .send_btn
-   = link_to '#' do
-    Send
+  .message_form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'text_box', placeholder: 'type a message'
+      .img_icon
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'icon')
+          = f.file_field :image, class: 'input'
+      = f.submit 'Send', class: 'send_btn'
