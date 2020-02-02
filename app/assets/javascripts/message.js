@@ -53,8 +53,9 @@ $('#new_message').on('submit', function(e){
     })
       .done(function(data){
         var html = buildHTML(data);
-        $('.messages').append(html);      
+        $('.chat_message').append(html);
         $('form')[0].reset(); 
+        $('.chat_message').animate({ scrollTop: $('.chat_message')[0].scrollHeight});
       })
 })
 });

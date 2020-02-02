@@ -123,6 +123,10 @@
      padding-top: 35px;
    }
   
+  // .messages {
+  //   overflow: scroll;
+  // }
+
   .upper-message {
     display: flex;
       &__user-name {
@@ -144,6 +148,8 @@
     padding: 12px 0 46px 0 ;
    }
  }
+
+
 
  .message_form {
    background-color: #d2d2d2;
